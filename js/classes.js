@@ -105,38 +105,38 @@ class Filme
         imgCartaz.setAttribute("style", "width: 300px; height: 400px; border-radius: 10px");
     
         let cardBody = document.createElement("div");
-        cardBody.setAttribute("class","card-body");
+        cardBody.setAttribute("class","card-body2");
         cardBody.setAttribute("style", "width: 300px; margin: auto;");
     
         let hCardTitle = document.createElement("h5");
         hCardTitle.setAttribute("class","hCardTitle");
-        hCardTitle.setAttribute("style","color:#fff");
+        hCardTitle.setAttribute("style","color:#000;  text-shadow: -1px -1px 0px #FFF,-1px 1px 0px #FFF,1px -1px 0px #FFF,1px 0px 0px #FFF;");
     
         let divDetalhes = document.createElement("div");
     
         let divGenero = document.createElement("div");
         divGenero.setAttribute("style","flex-grow: 1;");
-        divGenero.setAttribute("style","margin-top: 10px; color: #fff;");
+        divGenero.setAttribute("style","margin-top: 10px; color: #000; ");
 
         let divDuracao = document.createElement("div");
         divDuracao.setAttribute("style","flex-grow: 1;");
-        divDuracao.setAttribute("style","margin-top: 10px; color: #fff;");
+        divDuracao.setAttribute("style","margin-top: 10px; color: #000;");
     
         let divAnoProducao = document.createElement("div");
         divAnoProducao.setAttribute("style","flex-grow: 1;");
-        divAnoProducao.setAttribute("style","margin-top: 10px; color: #fff;");
+        divAnoProducao.setAttribute("style","margin-top: 10px; color: #000;");
     
         let divClassificacao = document.createElement("div");
         divClassificacao.setAttribute("style","flex-grow: 1;");
-        divClassificacao.setAttribute("style","margin-top: 10px; color: #fff;");
+        divClassificacao.setAttribute("style","margin-top: 10px; color: #000;");
 
         let divDiretores = document.createElement("div");
         divDiretores.setAttribute("style","flex-grow: 1;");
-        divDiretores.setAttribute("style","margin-top: 10px; color: #fff;");
+        divDiretores.setAttribute("style","margin-top: 10px; color: #000;");
 
         let divAtores = document.createElement("div");
         divAtores.setAttribute("style","flex-grow: 1;");
-        divAtores.setAttribute("style","margin-top: 10px; color: #fff;");
+        divAtores.setAttribute("style","margin-top: 10px; color: #000;");
 
         hCardTitle.appendChild(document.createTextNode(`"${this.titulo}"`));
         divGenero.appendChild(document.createTextNode(`Gênero: ${this.genero}`));
@@ -157,9 +157,6 @@ class Filme
         cardBody.appendChild(hCardTitle);
         cardBody.appendChild(divDetalhes);
 
-        this.setBtnDetalhes();
-        cardBody.appendChild(this.getBtnDetalhes());
-    
         return card;
     }
 }
