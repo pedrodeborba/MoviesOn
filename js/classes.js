@@ -42,6 +42,7 @@ class Filme
     
         let cardBody = document.createElement("div");
         cardBody.setAttribute("class","card-body");
+
     
         let hCardTitle = document.createElement("h5");
         hCardTitle.setAttribute("class","hCardTitle");
@@ -96,7 +97,7 @@ class Filme
         divFilmes.innerHTML = "";
 
         let card = document.createElement("div");
-        card.setAttribute("class","card");
+        card.setAttribute("class","card2");
         card.setAttribute("style","width: 40%; display:flex; margin: 0 30%; align-items: center; justify-content: center; background-color: transparent; border:none");
 
         let imgCartaz = document.createElement("img");
@@ -106,7 +107,7 @@ class Filme
     
         let cardBody = document.createElement("div");
         cardBody.setAttribute("class","card-body2");
-        cardBody.setAttribute("style", "width: 300px; margin: auto;");
+        cardBody.setAttribute("style", "width: 300px; text-align: center; margin-top: 20px");
     
         let hCardTitle = document.createElement("h5");
         hCardTitle.setAttribute("class","hCardTitle");
@@ -157,7 +158,20 @@ class Filme
         cardBody.appendChild(hCardTitle);
         cardBody.appendChild(divDetalhes);
 
+        let btnSalvar = document.createElement('button');
+        btnSalvar.appendChild(document.createTextNode('Salvar'));
+        btnSalvar.setAttribute('id','btnSalvar');
+        btnSalvar.setAttribute('style','width: 70px; height: 30px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        divDetalhes.appendChild(btnSalvar);
+
+        let btnFechar = document.createElement('button');
+        btnFechar.appendChild(document.createTextNode('Fechar'));
+        btnFechar.setAttribute('id','btnFechar');
+        btnFechar.setAttribute('style','width: 70px; height: 30px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        divDetalhes.appendChild(btnFechar);
+
         return card;
+
     }
 }
 

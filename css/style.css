@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    background-image: linear-gradient(to right, #ffffff, #f3d0f7, #ff97cc, #ff557e, #eb1212);
+}
 img{
     width: 100%;
     height: 100%;
-}
-body{
-    background-color: #141414;
 }
 button{
     background: transparent;
@@ -32,16 +32,15 @@ nav.navbar{
 #btn-buscar-filme.btn.btn-outline-success{
     background-color: #fff;
     border: none;
-    color: #dcdcdc ;
+    color: #3d3d3d;
 }
 #btn-buscar-filme.btn.btn-outline-success:hover{
-    color: #141414;
+    color: #ff1334;
 }
 
 /*Slider*/
 .slider {
     width: 80vw;
-    height: auto;
     margin: auto;
     overflow: hidden;
     padding-top: 70px;
@@ -85,11 +84,13 @@ nav.navbar{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 /*Card*/
 .card{
     width: 250px;
+    margin: 5px;
 }
 img.card-img-top{
     max-height: 300px;
@@ -97,16 +98,12 @@ img.card-img-top{
 .card-body{
     text-align: center;
 }
-
-img.card-img-top{
-    max-height: 300px;
-}
-
 /*Buttons*/
 a.btn.btn-primary{
     background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);
     border: none;
     color:#fff;
+    margin-top: 10px;
 }
 
 button.btnDetalhesFilme{
