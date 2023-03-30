@@ -27,7 +27,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Início</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Favoritos</a>
+                    <a class="nav-link" id="nav-favoritos" href="#">Favoritos</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -52,7 +52,8 @@
           </nav>
     </header>
   <main>
-    <div class="slider">
+    <div id="lista-filmes">
+      <div class="slider">
         <div class="slide-track">
             <div class="slide">
                 <img src="./img/slider/1.webp" alt="">
@@ -99,25 +100,9 @@
             </div>
         </div>
     </div>
-
-    <div id="lista-filmes">
-      <div class="card" style="width: 14rem;">
-        <img src="./img/filmes/3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Sonic</h5>
-          <div style="display: flex; justify-content: space-around;">
-            <div style="flex-grow: 1">Aventura</div>
-            <div style="flex-grow: 2">2023</div>
-            <div style="flex-grow: 3">16A</div>
-          </div>
-          <a href="#" class="btn btn-primary">Detalhes</a>
-        </div>
-      </div>
     </div>
-        </div>
-        <div id="mostrar-filme">
-
-        </div>
+        
+    <div id="mostrar-filme"></div>
   </main> 
   <script src="./js/script.js"></script>
 </body>

@@ -69,11 +69,29 @@ let detalhesFilme = async (id) => {
             response.Awards,
             response.imdbRating
         )
-        console.log(filme.Runtime)
-
+        console.log(filme)
         document.querySelector("#mostrar-filme").appendChild(filme.getDetalhesFilme());
+
+        document.querySelector("#btnFechar").onclick = ()=>{
+            document.querySelector("#input-buscar-filme").value = "";
+            document.querySelector("#lista-filmes").style.display = "flex";
+            document.querySelector("#mostrar-filme").innerHTML = "";
+            document.querySelector("#mostrar-filme").style.display = "none";
+        }
+
+        document.querySelector("#btnSalvar").onclick = ()=>{
+
+            pegarFavoritos();
+
+            let navFavoritos = document.querySelector("#nav-favoritos");
+            navFavoritos.onclick = () => {
+                //listarFavoritos();
+            }
+        }
+
         document.querySelector("#lista-filmes").getElementsByClassName.display = "none";
         document.querySelector("#mostrar-filme").getElementsByClassName.display = "flex";
+        
     });
 }
 
