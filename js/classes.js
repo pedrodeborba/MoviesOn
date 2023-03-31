@@ -155,32 +155,35 @@ class Filme
         cardBody.appendChild(divDetalhes);
 
         let btnSalvar = document.createElement('button');
-        btnSalvar.appendChild(document.createTextNode('Salvar'));
+        btnSalvar.appendChild(document.createTextNode('Favoritar'));
         btnSalvar.setAttribute('id','btnSalvar');
-        btnSalvar.setAttribute('style','width: 70px; height: 30px; margin-right: 10px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnSalvar.setAttribute('style','width: 100px; height: 30px; margin-right: 10px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
         divDetalhes.appendChild(btnSalvar);
+
+        let btnDesfavoritar = document.createElement('button');
+        btnDesfavoritar.appendChild(document.createTextNode('Desfavoritar'));
+        btnDesfavoritar.setAttribute('id','btnDesfavoritar');
+        btnDesfavoritar.setAttribute('style','width: 100px; height: 30px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        divDetalhes.appendChild(btnDesfavoritar);
 
         let btnFechar = document.createElement('button');
         btnFechar.appendChild(document.createTextNode('Fechar'));
         btnFechar.setAttribute('id','btnFechar');
         btnFechar.setAttribute('style','width: 70px; height: 30px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
-        divDetalhes.appendChild(btnFechar);
+        divDetalhes.appendChild(btnFechar);     
 
         return card;
 
     }
 
-    pegarFavoritos = () =>{
+    /*pegarFavoritos = () =>{
         let filmesString = localStorage.getItem('filmesFavoritos');
         var filmes = JSON.parse(filmesString);
         filmes.push(filme);
         filmes = JSON.stringify(filmes);
         localStorage.setItem('filmesFavoritos',filmes);
-    }
+    }*/
 
-    listarFavoritos = () =>{
-        
-    }
 
 }
 
