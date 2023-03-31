@@ -26,7 +26,7 @@ btnBuscarFilme.onclick = () => {
             });
             listarFilmes(filmes);
         });
-
+        document.querySelector(".slider").style.display = "none";
     }
     return false;
 };
@@ -85,6 +85,7 @@ let detalhesFilme = async (id) => {
             document.querySelector("#lista-filmes").style.display = "flex";
             document.querySelector("#mostrar-filme").innerHTML = "";
             document.querySelector("#mostrar-filme").style.display = "flex";
+            document.querySelector(".slider").style.display = "flex";
         }
 
         document.querySelector("#btnDesfavoritar").onclick = () => {

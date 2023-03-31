@@ -1,18 +1,18 @@
-class Ator
-{
-    constructor(id, nome){
-        this.nome = nome;
-        this.id = id
-    }
-}
+// class Ator
+// {
+//     constructor(id, nome){
+//         this.nome = nome;
+//         this.id = id
+//     }
+// }
 
-class Diretor
-{
-    constructor(id, nome){
-        this.nome = nome;
-        this.id = id
-    }
-}
+// class Diretor
+// {
+//     constructor(id, nome){
+//         this.nome = nome;
+//         this.id = id
+//     }
+// }
 
 class Filme
 {
@@ -63,9 +63,7 @@ class Filme
         divGenero.appendChild(document.createTextNode(this.genero));
         divAnoProducao.appendChild(document.createTextNode(this.ano));
         divClassificacao.appendChild(document.createTextNode(this.classificacao));
-        divDetalhes.appendChild(divGenero);
         divDetalhes.appendChild(divAnoProducao);
-        divDetalhes.appendChild(divClassificacao);
         card.appendChild(imgCartaz);
         card.appendChild(cardBody);
         cardBody.appendChild(hCardTitle);
@@ -94,7 +92,7 @@ class Filme
 
         let card = document.createElement("div");
         card.setAttribute("class","card2");
-        card.setAttribute("style","width: 40%; display:flex; margin: 0 30%; align-items: center; justify-content: center; background-color: transparent; border:none");
+        card.setAttribute("style","width: 80%; display:flex; margin: 50px; align-items: center; justify-content: center; background-color: transparent; border:none");
 
         let imgCartaz = document.createElement("img");
         imgCartaz.setAttribute("class","card-img-top");
@@ -160,10 +158,19 @@ class Filme
         btnSalvar.setAttribute('style','width: 100px; height: 30px; margin-right: 10px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
         divDetalhes.appendChild(btnSalvar);
 
+
+        // let btnSalvar = document.createElement('button');
+        // let i = document.createElement('i');
+        // i.appendChild(btnSalvar);
+        // i.setAttribute('class','bi bi-heart');
+        // divDetalhes.appendChild(btnSalvar);
+
+
+
         let btnDesfavoritar = document.createElement('button');
         btnDesfavoritar.appendChild(document.createTextNode('Desfavoritar'));
         btnDesfavoritar.setAttribute('id','btnDesfavoritar');
-        btnDesfavoritar.setAttribute('style','width: 100px; height: 30px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnDesfavoritar.setAttribute('style','width: 100px; height: 30px; margin-top: 20px; margin-left: 10px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
         divDetalhes.appendChild(btnDesfavoritar);
 
         let btnFechar = document.createElement('button');
@@ -175,15 +182,6 @@ class Filme
         return card;
 
     }
-
-    /*pegarFavoritos = () =>{
-        let filmesString = localStorage.getItem('filmesFavoritos');
-        var filmes = JSON.parse(filmesString);
-        filmes.push(filme);
-        filmes = JSON.stringify(filmes);
-        localStorage.setItem('filmesFavoritos',filmes);
-    }*/
-
 
 }
 
