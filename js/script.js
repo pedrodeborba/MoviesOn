@@ -65,7 +65,7 @@ let listarFilmes = async (filmes) => {
 
 
 let detalhesFilme = async (id) => {
-    fetch("http://www.omdbapi.com/?apikey=e1184196&i=" + id)
+    fetch("https://www.omdbapi.com/?apikey=e1184196&i=" + id)
     .then((response)=> response.json())
     .then((response)=>{
         //Instanciar objeto da classe Filme
