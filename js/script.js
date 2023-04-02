@@ -8,7 +8,7 @@ btnBuscarFilme.onclick = () => {
     }
     if(inputBuscarFilme.value.length > 0){
         let filmes = new Array();
-        fetch("https://www.omdbapi.com/?apikey=e1184196&s="+inputBuscarFilme.value, {mode: "cors"})
+        fetch("https://www.omdbapi.com/?apikey=e1184196&s="+inputBuscarFilme.value)
         .then((response) => response.json())
         .then((response)=> {
             if (response.Response === "False") {
