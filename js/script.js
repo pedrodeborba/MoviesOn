@@ -2,34 +2,44 @@ let inputBuscarFilme = document.querySelector("#input-buscar-filme");
 let btnBuscarFilme = document.querySelector("#btn-buscar-filme");
 
 btnBuscarFilme.onclick = () => {
+    if(inputBuscarFilme.value == ""){
+        document.querySelector(".slider").style.display = "none";
+        document.querySelector("#lista-filmes").innerHTML = "Nenhum resultado encontrado";
+    }
     if(inputBuscarFilme.value.length > 0){
         let filmes = new Array();
         fetch("http://www.omdbapi.com/?apikey=e1184196&s="+inputBuscarFilme.value, {mode: "cors"})
         .then((response) => response.json())
         .then((response)=> {
-            response.Search.forEach((item)=>{   
-                let filme = new Filme(
-                    item.imdbID,
-                    item.Title,
-                    item.Year,
-                    null,
-                    null,
-                    item.Poster,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                );
-                filmes.push(filme);
+            if (response.Response === "False") {
+                document.querySelector("#lista-filmes").innerHTML = "Nenhum resultado encontrado";
+            } else {
+                response.Search.forEach((item)=>{ 
+                    console.log(response)  
+                    let filme = new Filme(
+                        item.imdbID,
+                        item.Title,
+                        item.Year,
+                        null,
+                        null,
+                        item.Poster,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                    );
+                    filmes.push(filme);
 
-            });
-            listarFilmes(filmes);
+                });
+                listarFilmes(filmes);
+            }
         });
         document.querySelector(".slider").style.display = "none";
     }
     return false;
 };
+
 
 
 
@@ -77,6 +87,13 @@ let detalhesFilme = async (id) => {
         document.querySelector("#mostrar-filme").appendChild(filme.getDetalhesFilme());
 
         document.querySelector("#btnSalvar").onclick = () =>{
+            const textNode = btnSalvar.firstChild;
+            btnSalvar.removeChild(textNode);
+            btnSalvar.appendChild(document.createTextNode('Salvo'));
+
+            let mudarCor = document.querySelector("#btnSalvar");
+            mudarCor.setAttribute('style','width: 100px; height: 30px; margin-right: 10px; margin-top: 20px; background-color: #fff;color:#000;border-radius: 5px;');
+            
             salvarFilme();
         }
 
@@ -108,13 +125,13 @@ let detalhesFilme = async (id) => {
             }
         
             if (filmes.some(filmeId => filmeId.id === filme.id)){
-                alert("Salvo");
                 return;
             }
         
             filmes.push(filme);
             filmes = JSON.stringify(filmes);
             localStorage.setItem('filmesFavoritos', filmes);
+            
         }
     });
 }
@@ -124,11 +141,13 @@ let detalhesFilme = async (id) => {
 
 let navFavoritos = document.querySelector("#nav-favoritos");
 navFavoritos.onclick = () => {
+    document.querySelector(".slider").style.display = "none";
     listarFavoritos();
 }
 
 listarFavoritos = () => {
     let filmesFavoritos = localStorage.getItem('filmesFavoritos');
+    
     filmesFavoritos = JSON.parse(filmesFavoritos);
     let filmes = new Array();
     filmesFavoritos.forEach((item)=>{
@@ -148,5 +167,20 @@ listarFavoritos = () => {
     });
     listarFilmes(filmes);
 }
+
+
+// voltar ao inicio
+document.querySelector(".nav-link").onclick =()=>{
+    document.querySelector("#lista-filmes").innerHTML = "";
+    document.querySelector("#mostrar-filme").innerHTML = "";
+    document.querySelector(".slider").style.display = "flex";
+}
+document.querySelector(".navbar-brand").onclick =()=>{
+    document.querySelector("#lista-filmes").innerHTML = "";
+    document.querySelector("#mostrar-filme").innerHTML = "";
+    document.querySelector(".slider").style.display = "flex";
+}
+
+
 
 
