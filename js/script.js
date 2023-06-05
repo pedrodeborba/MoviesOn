@@ -3,7 +3,6 @@ let btnBuscarFilme = document.querySelector("#btn-buscar-filme");
 
 btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value == ""){
-        document.querySelector(".slider").style.display = "none";
         document.querySelector("#lista-filmes").innerHTML = "Nenhum resultado encontrado";
     }
     if(inputBuscarFilme.value.length > 0){
@@ -35,7 +34,6 @@ btnBuscarFilme.onclick = () => {
                 listarFilmes(filmes);
             }
         });
-        document.querySelector(".slider").style.display = "none";
     }
     return false;
 };
@@ -102,7 +100,6 @@ let detalhesFilme = async (id) => {
             document.querySelector("#lista-filmes").style.display = "flex";
             document.querySelector("#mostrar-filme").innerHTML = "";
             document.querySelector("#mostrar-filme").style.display = "flex";
-            document.querySelector(".slider").style.display = "flex";
         }
 
         document.querySelector("#btnDesfavoritar").onclick = () => {
@@ -141,7 +138,6 @@ let detalhesFilme = async (id) => {
 
 let navFavoritos = document.querySelector("#nav-favoritos");
 navFavoritos.onclick = () => {
-    document.querySelector(".slider").style.display = "none";
     listarFavoritos();
 }
 
@@ -173,12 +169,10 @@ listarFavoritos = () => {
 document.querySelector(".nav-link").onclick =()=>{
     document.querySelector("#lista-filmes").innerHTML = "";
     document.querySelector("#mostrar-filme").innerHTML = "";
-    document.querySelector(".slider").style.display = "flex";
 }
 document.querySelector(".navbar-brand").onclick =()=>{
     document.querySelector("#lista-filmes").innerHTML = "";
     document.querySelector("#mostrar-filme").innerHTML = "";
-    document.querySelector(".slider").style.display = "flex";
 }
 
 

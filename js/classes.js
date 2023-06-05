@@ -163,26 +163,26 @@ class Filme
         let btnSalvar = document.createElement('button');
         btnSalvar.appendChild(document.createTextNode('Favoritar'));
         btnSalvar.setAttribute('id','btnSalvar');
-        btnSalvar.setAttribute('style','width: 100px; height: 30px; margin-right: 10px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnSalvar.setAttribute('style','width: 100px; height: 30px; margin-right: 10px; margin-top: 20px; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);border-radius: 20px; color: #fff;');
         divDetalhes.appendChild(btnSalvar);
 
         let btnDesfavoritar = document.createElement('button');
         btnDesfavoritar.appendChild(document.createTextNode('Desfavoritar'));
         btnDesfavoritar.setAttribute('id','btnDesfavoritar');
-        btnDesfavoritar.setAttribute('style','width: 100px; height: 30px; margin-top: 20px; margin-left: 10px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnDesfavoritar.setAttribute('style','width: 100px; height: 30px; margin-top: 20px; margin-left: 10px; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);border-radius: 20px;color: #fff;');
         divDetalhes.appendChild(btnDesfavoritar);
 
         let btnFechar = document.createElement('button');
         btnFechar.appendChild(document.createTextNode('Fechar'));
         btnFechar.setAttribute('id','btnFechar');
-        btnFechar.setAttribute('style','width: 70px; height: 30px; margin-top: 20px; margin-left: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnFechar.setAttribute('style','width: 70px; height: 30px; margin-top: 20px; margin-left: 20px; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);border-radius: 20px;color: #fff;');
         divDetalhes.appendChild(btnFechar);     
 
 
         let btnEditar = document.createElement('button');
         btnEditar.appendChild(document.createTextNode('Editar'));
         btnEditar.setAttribute('id','btnEditar');
-        btnEditar.setAttribute('style','width: 70px; height: 30px; margin-left: 20px; margin-top: 20px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;');
+        btnEditar.setAttribute('style','width: 70px; height: 30px; margin-left: 20px; margin-top: 20px; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);border-radius: 20px;color: #fff;');
         divDetalhes.appendChild(btnEditar);
 
         btnEditar.addEventListener('click', () => {
@@ -243,7 +243,7 @@ class Filme
             let saveButton = document.createElement('button');
             saveButton.appendChild(document.createTextNode('Salvar'));
             saveButton.setAttribute('id','btnSave');
-            saveButton.setAttribute('style','width: 100%; height: 30px; margin-top: 10px; background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);color:#fff;border-radius: 5px;'); 
+            saveButton.setAttribute('style','width: 100%; height: 30px; margin-top: 10px; background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);border-radius: 20px;'); 
 
             saveButton.onclick = () => {
             hCardTitle.contentEditable = false;

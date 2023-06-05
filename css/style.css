@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 html{
-    background-image: linear-gradient(to right, #ffffff, #f3d0f7, #ff97cc, #ff557e, #eb1212);
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
 }
 body{
     max-width: 100%;
@@ -27,7 +28,7 @@ nav.navbar{
     width: 100%;
     position: fixed;
     z-index: 500;
-    background-image: linear-gradient(to right, #ffffff, #f3d0f7, #ff97cc, #ff557e, #eb1212);
+    background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
 }
 #btn-buscar-filme.btn.btn-outline-success{
     background-color: #fff;
@@ -45,7 +46,8 @@ nav.navbar{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: linear-gradient(to right, #ffffff, #f3d0f7, #ff97cc, #ff557e, #eb1212);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
 }
 
 /*Slider*/
