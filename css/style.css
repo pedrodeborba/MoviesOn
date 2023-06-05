@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 html{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
+    background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);
 }
 body{
     max-width: 100%;
@@ -28,10 +27,10 @@ nav.navbar{
     width: 100%;
     position: fixed;
     z-index: 500;
-    background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
+    background-color: #fff;
 }
 #btn-buscar-filme.btn.btn-outline-success{
-    background-color: #fff;
+    background: rgb(255,255,255);
     border: none;
     color: #3d3d3d;
 }
@@ -46,47 +45,7 @@ nav.navbar{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,0,0,1) 0%, rgba(0,212,255,1) 100%);
-}
-
-/*Slider*/
-.slider {
-    height: 100%;
-    width: 100vw;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider .slide-track {
-    display: flex;
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 60s linear infinite;
-    width: calc(18vw * 14);
-}
-.slider .slide img {
-    width: 100%;
-}
-.slide {
-    width: 100%;
-    max-width: 800px;
-    height: 300px;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-@keyframes scroll {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-    100% {
-        -webkit-transform: translateX(calc(-18vw * 7));
-        transform: translateX(calc(-18vw * 7));
-    }
+    background-image: linear-gradient(to right bottom, #ff0000, #ff1334, #ff2c55, #ff4472, #ff598c);
 }
 
 /*Filmes*/
